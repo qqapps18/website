@@ -1,6 +1,6 @@
 {
-    "name": "flutter_web_app",
-    "short_name": "flutter_web_app",
+    "name": "qqapps_main_web",
+    "short_name": "qqapps_main_web",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
