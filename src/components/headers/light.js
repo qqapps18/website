@@ -11,19 +11,19 @@ import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
 const Header = tw.header`
-  flex justify-between items-center
-  max-w-screen-xl mx-auto
+  fixed
+  w-screen mx-auto px-4 py-4
 `;
 
-export const NavLinks = tw.div`inline-block`;
+export const NavLinks = tw.div`flex justify-end w-screen`;
 
 /* hocus: stands for "on hover or focus"
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
 export const NavLink = tw.a`
-  text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+  text-gray-100 text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
+  pb-1 border-b-2 border-transparent hover:border-primary-100 hocus:text-primary-100
 `;
 
 export const PrimaryLink = tw(NavLink)`
@@ -33,24 +33,22 @@ export const PrimaryLink = tw(NavLink)`
   border-b-0
 `;
 
-export const LogoLink = styled(NavLink)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
-
-  img {
-    ${tw`w-10 mr-3`}
-  }
-`;
-
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
 export const NavToggle = tw.button`
-  lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
+  text-white lg:hidden z-20 focus:outline-none hocus:text-primary-100 transition duration-300 py-4 px-4
 `;
 export const MobileNavLinks = motion(styled.div`
-  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
+  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg bg-white`}
   ${NavLinks} {
     ${tw`flex flex-col items-center`}
   }
 `);
+
+export const MobileNavLink = tw.a`
+  text-black text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+  font-semibold tracking-wide transition duration-300
+  pb-1 border-b-2 border-transparent hover:border-primary-100 hocus:text-primary-100
+`;
 
 export const DesktopNavLinks = tw.nav`
   hidden lg:flex flex-1 justify-between items-center
@@ -58,7 +56,6 @@ export const DesktopNavLinks = tw.nav`
 
 function Lights({
   roundedHeaderButton = false,
-  logoLink,
   links,
   className,
   collapseBreakpointClass = "lg",
@@ -78,16 +75,13 @@ function Lights({
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      {/* <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
-        Login
-      </NavLink> */}
-      {/* <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">
-        Sign Up
-      </PrimaryLink> */}
+      <NavLink href="/privacy-policy">Terms And Conditions</NavLink>
+    </NavLinks>,
+  ];
+
+  const defaultMobileLinks = [
+    <NavLinks key={1}>
+      <MobileNavLink href="/privacy-policy">Terms And Conditions</MobileNavLink>
     </NavLinks>,
   ];
 
@@ -95,40 +89,30 @@ function Lights({
   const collapseBreakpointCss =
     collapseBreakPointCssMap[collapseBreakpointClass];
 
-  const defaultLogoLink = (
-    <LogoLink href="/">
-      {/* <img src={logo} alt="logo" /> */}
-      Treact
-    </LogoLink>
-  );
-
-  logoLink = logoLink || defaultLogoLink;
   links = links || defaultLinks;
 
   return (
     <Header className={className || "header-light"}>
       <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks}>
-        {logoLink}
         {links}
       </DesktopNavLinks>
 
       <MobileNavLinksContainer
         css={collapseBreakpointCss.mobileNavLinksContainer}
       >
-        {logoLink}
         <MobileNavLinks
           initial={{ x: "150%", display: "none" }}
           animate={animation}
           css={collapseBreakpointCss.mobileNavLinks}
         >
-          {links}
+          {defaultMobileLinks}
         </MobileNavLinks>
         <NavToggle
           onClick={toggleNavbar}
           className={showNavLinks ? "open" : "closed"}
         >
           {showNavLinks ? (
-            <CloseIcon tw="w-6 h-6" />
+            <CloseIcon tw="w-6 h-6 text-black focus:outline-none hocus:text-primary-100 transition duration-300" />
           ) : (
             <MenuIcon tw="w-6 h-6" />
           )}
