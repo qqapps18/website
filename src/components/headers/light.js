@@ -45,7 +45,7 @@ export const MobileNavLinks = motion(styled.div`
   }
 `);
 
-export const MobileNavLink = tw.a`
+export const MobileNavLink = tw(Link)`
   text-black text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
   pb-1 border-b-2 border-transparent hover:border-primary-100 hocus:text-primary-100
@@ -74,19 +74,24 @@ function Lights({
    * changing the defaultLinks variable below below.
    * If you manipulate links here, all the styling on the links is already done for you. If you pass links yourself though, you are responsible for styling the links or use the helper styled components that are defined here (NavLink)
    */
+  const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
+
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink to="/privacy-policy">Terms & Conditions</NavLink>
+      <NavLink to="/privacy-policy" onClick={toggleNavbar}>
+        Terms & Conditions
+      </NavLink>
     </NavLinks>,
   ];
 
   const defaultMobileLinks = [
     <NavLinks key={1}>
-      <MobileNavLink href="/privacy-policy">Terms & Conditions</MobileNavLink>
+      <MobileNavLink to="/privacy-policy" onClick={toggleNavbar}>
+        Terms & Conditions
+      </MobileNavLink>
     </NavLinks>,
   ];
 
-  const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
   const collapseBreakpointCss =
     collapseBreakPointCssMap[collapseBreakpointClass];
 

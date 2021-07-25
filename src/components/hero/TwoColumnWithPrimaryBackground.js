@@ -10,7 +10,7 @@ import downloadPlayStore from "../../images/download_play_store.svg";
 
 const PrimaryBackgroundContainer = tw.div`min-h-screen flex items-center justify-center bg-primary-900`;
 
-const Row = tw.div`flex items-center justify-center flex-col m-4 lg:flex-row`;
+const Row = tw.div`flex items-center justify-center flex-col m-4 my-20 lg:flex-row`;
 const DownloadButtonsRow = tw.div`flex flex-row space-x-4 pt-8 justify-center lg:justify-start`;
 const TextColumn = tw.div`text-center lg:text-left`;
 const IllustrationColumn = tw.div`mt-16 lg:mt-0 lg:ml-16 lg:w-1/2`;

@@ -8,9 +8,9 @@ import Header from "./../components/headers/light.js";
 import { SectionHeading } from "./../components/misc/Headings";
 
 const HeadingRow = tw.div`flex`;
-const Heading = tw(SectionHeading)`text-gray-900 mb-10`;
+const Heading = tw(SectionHeading)`text-gray-100 mb-10`;
 const Text = styled.div`
-  ${tw`text-lg  text-gray-800`}
+  ${tw`text-lg  text-gray-100`}
   p {
     ${tw`mt-2 leading-loose`}
   }
@@ -33,9 +33,11 @@ const Text = styled.div`
     }
   }
 `;
+const PrimaryBackgroundContainer = tw.div`min-h-screen flex items-center justify-center bg-primary-900 p-8`;
+
 function PrivacyPolicy({ headingText = "Privacy Policy" }) {
   return (
-    <>
+    <PrimaryBackgroundContainer>
       <Header />
       <Container>
         <ContentWithPaddingXl>
@@ -43,7 +45,6 @@ function PrivacyPolicy({ headingText = "Privacy Policy" }) {
             <Heading>{headingText}</Heading>
           </HeadingRow>
           <Text>
-            <h1>Privacy policy</h1>
             <p>
               We respect your privacy and are committed to protecting it through
               our compliance with this privacy policy (“Policy”). This Policy
@@ -286,7 +287,7 @@ function PrivacyPolicy({ headingText = "Privacy Policy" }) {
           </Text>
         </ContentWithPaddingXl>
       </Container>
-    </>
+    </PrimaryBackgroundContainer>
   );
 }
 
