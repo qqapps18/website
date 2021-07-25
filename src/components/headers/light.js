@@ -21,7 +21,7 @@ export const NavLinks = tw.div`flex justify-end w-screen`;
 /* hocus: stands for "on hover or focus"
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
-export const NavLink = tw.a`
+export const NavLink = tw(Link)`
   text-gray-100 text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
   pb-1 border-b-2 border-transparent hover:border-primary-100 hocus:text-primary-100
@@ -76,13 +76,13 @@ function Lights({
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <Link to="/privacy-policy">Terms And Conditions</Link>
+      <NavLink to="/privacy-policy">Terms & Conditions</NavLink>
     </NavLinks>,
   ];
 
   const defaultMobileLinks = [
     <NavLinks key={1}>
-      <MobileNavLink href="/privacy-policy">Terms And Conditions</MobileNavLink>
+      <MobileNavLink href="/privacy-policy">Terms & Conditions</MobileNavLink>
     </NavLinks>,
   ];
 
