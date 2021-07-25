@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
@@ -75,7 +76,7 @@ function Lights({
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/privacy-policy">Terms And Conditions</NavLink>
+      <Link to="/privacy-policy">Terms And Conditions</Link>
     </NavLinks>,
   ];
 
