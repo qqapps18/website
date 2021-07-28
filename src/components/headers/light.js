@@ -78,7 +78,7 @@ function Lights({
 
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink to="/privacy-policy" onClick={toggleNavbar}>
+      <NavLink to="/website/privacy-policy" onClick={toggleNavbar}>
         Terms & Conditions
       </NavLink>
     </NavLinks>,
@@ -86,7 +86,7 @@ function Lights({
 
   const defaultMobileLinks = [
     <NavLinks key={1}>
-      <MobileNavLink to="/privacy-policy" onClick={toggleNavbar}>
+      <MobileNavLink to="/website/privacy-policy" onClick={toggleNavbar}>
         Terms & Conditions
       </MobileNavLink>
     </NavLinks>,
