@@ -2,6 +2,7 @@ import "tailwindcss/dist/base.css";
 import tw from "twin.macro";
 import PrimaryBackground from "./components/hero/TwoColumnWithPrimaryBackground";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Support from "./pages/Support";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Links from "./components/headers/light.js";
 
@@ -17,10 +18,12 @@ function App() {
     <Router>
       <Links />
       <Switch>
-        <Route path="/website/privacy-policy">
+        <Route path="/privacy-policy">
           <PrivacyPolicy />
         </Route>
-        <Route path="/support"></Route>
+        <Route path="/support">
+          <Support />
+        </Route>
         <Route path="/">
           <PrimaryBackground />
         </Route>

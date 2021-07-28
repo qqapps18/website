@@ -1,6 +1,7 @@
 import React from "react";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import Footer from "./../footers/MiniCenteredFooter";
 
 import { SectionHeading } from "../misc/Headings.js";
 import { SectionDescription } from "../misc/Typography.js";
@@ -29,26 +30,29 @@ function PrimaryBackground({
   imageSrc = logoImageSrc,
 }) {
   return (
-    <PrimaryBackgroundContainer>
-      <Row>
-        <TextColumn>
-          <Heading>{heading}</Heading>
-          <Description>{description}</Description>
+    <>
+      <PrimaryBackgroundContainer>
+        <Row>
+          <TextColumn>
+            <Heading>{heading}</Heading>
+            <Description>{description}</Description>
 
-          <DownloadButtonsRow>
-            {/* <a href="https://www.google.com"> */}
-            <DownloadImage src={downloadAppStore} />
-            {/* </a> */}
-            <a href="https://play.google.com/store/apps/developer?id=Sami+Pesate&hl=en&gl=US">
-              <DownloadImage src={downloadPlayStore} />
-            </a>
-          </DownloadButtonsRow>
-        </TextColumn>
-        <IllustrationColumn>
-          <Image src={imageSrc} />
-        </IllustrationColumn>
-      </Row>
-    </PrimaryBackgroundContainer>
+            <DownloadButtonsRow>
+              {/* <a href="https://www.google.com"> */}
+              <DownloadImage src={downloadAppStore} />
+              {/* </a> */}
+              <a href="https://play.google.com/store/apps/developer?id=Sami+Pesate&hl=en&gl=US">
+                <DownloadImage src={downloadPlayStore} />
+              </a>
+            </DownloadButtonsRow>
+          </TextColumn>
+          <IllustrationColumn>
+            <Image src={imageSrc} />
+          </IllustrationColumn>
+        </Row>
+      </PrimaryBackgroundContainer>
+      <Footer></Footer>
+    </>
   );
 }
 
