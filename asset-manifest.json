@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/website/static/js/main.51538ce7.chunk.js",
-    "main.js.map": "/website/static/js/main.51538ce7.chunk.js.map",
-    "runtime-main.js": "/website/static/js/runtime-main.dfd29bfe.js",
-    "runtime-main.js.map": "/website/static/js/runtime-main.dfd29bfe.js.map",
+    "main.js": "/website/static/js/main.24703385.chunk.js",
+    "main.js.map": "/website/static/js/main.24703385.chunk.js.map",
+    "runtime-main.js": "/website/static/js/runtime-main.4f057e64.js",
+    "runtime-main.js.map": "/website/static/js/runtime-main.4f057e64.js.map",
     "static/css/2.b38f08e9.chunk.css": "/website/static/css/2.b38f08e9.chunk.css",
-    "static/js/2.389019ac.chunk.js": "/website/static/js/2.389019ac.chunk.js",
-    "static/js/2.389019ac.chunk.js.map": "/website/static/js/2.389019ac.chunk.js.map",
-    "static/js/3.c7452817.chunk.js": "/website/static/js/3.c7452817.chunk.js",
-    "static/js/3.c7452817.chunk.js.map": "/website/static/js/3.c7452817.chunk.js.map",
+    "static/js/2.bc8b8da8.chunk.js": "/website/static/js/2.bc8b8da8.chunk.js",
+    "static/js/2.bc8b8da8.chunk.js.map": "/website/static/js/2.bc8b8da8.chunk.js.map",
+    "static/js/3.1fd0341d.chunk.js": "/website/static/js/3.1fd0341d.chunk.js",
+    "static/js/3.1fd0341d.chunk.js.map": "/website/static/js/3.1fd0341d.chunk.js.map",
     "index.html": "/website/index.html",
     "static/css/2.b38f08e9.chunk.css.map": "/website/static/css/2.b38f08e9.chunk.css.map",
-    "static/js/2.389019ac.chunk.js.LICENSE.txt": "/website/static/js/2.389019ac.chunk.js.LICENSE.txt",
+    "static/js/2.bc8b8da8.chunk.js.LICENSE.txt": "/website/static/js/2.bc8b8da8.chunk.js.LICENSE.txt",
     "static/media/Download_App_Store.8c4986ee.svg": "/website/static/media/Download_App_Store.8c4986ee.svg",
     "static/media/download_play_store.1d8f7bc8.svg": "/website/static/media/download_play_store.1d8f7bc8.svg",
     "static/media/iphone_mockup.0b44a1f8.png": "/website/static/media/iphone_mockup.0b44a1f8.png",
@@ -19,9 +19,9 @@
     "static/media/x.svg": "/website/static/media/x.6c9a4ba7.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.dfd29bfe.js",
+    "static/js/runtime-main.4f057e64.js",
     "static/css/2.b38f08e9.chunk.css",
-    "static/js/2.389019ac.chunk.js",
-    "static/js/main.51538ce7.chunk.js"
+    "static/js/2.bc8b8da8.chunk.js",
+    "static/js/main.24703385.chunk.js"
   ]
 }
