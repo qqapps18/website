@@ -17,7 +17,7 @@ function App() {
     <Router>
       <Links />
       <Switch>
-        <Route path="/privacy-policy">
+        <Route path="/website/privacy-policy">
           <PrivacyPolicy />
         </Route>
         <Route path="/support"></Route>
