@@ -38,9 +38,9 @@ function PrimaryBackground({
             <Description>{description}</Description>
 
             <DownloadButtonsRow>
-              {/* <a href="https://www.google.com"> */}
-              <DownloadImage src={downloadAppStore} />
-              {/* </a> */}
+              <a href="https://apps.apple.com/us/app/the-blessing-book/id1546721746">
+                <DownloadImage src={downloadAppStore} />
+              </a>
               <a href="https://play.google.com/store/apps/developer?id=Sami+Pesate&hl=en&gl=US">
                 <DownloadImage src={downloadPlayStore} />
               </a>
